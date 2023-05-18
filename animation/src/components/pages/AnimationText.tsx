@@ -15,7 +15,7 @@ export default function AnimationText() {
 
   return (
     <div>
-      <div className="text-center">
+      <div className="text-center ">
         <AnimatePresence>
           {isVisible && (
             <motion.p
@@ -27,12 +27,12 @@ export default function AnimationText() {
               transition={{ duration: 6 }}
               color="white"
               style={{
-                position: "fixed",
+                // position: "fixed",
                 bottom: 0,
                 left: 0,
                 right: 0,
                 // backgroundColor: "black",
-                padding: "40px",
+                padding: "200px",
                 fontWeight: "bold",
                 fontSize: "40px",
               }}
