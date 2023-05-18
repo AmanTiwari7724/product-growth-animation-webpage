@@ -34,7 +34,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="overflow-hidden">
       {components.map((componentData, index) => (
         <Component
           key={componentData.id}

@@ -104,57 +104,11 @@ const CharacterAnimation = () => {
 
   const variants = {
     hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1 , y: -100 },
+    visible: { opacity: 1, y: -100 },
   };
 
   return (
     <>
-      {/* <div className="flex justify-around mt-20 bg-gray-200 h-screen">
-        <div className="flex justify-between ">
-          <div className="ml-8">
-            <motion.span
-              variants={typingAnimation}
-              initial="hidden"
-              whileInView="visible"
-            >
-              {text.split("").map((char, index) => (
-                <span className="text-4xl font-bold" key={index}>
-                  {char}
-                </span>
-              ))}
-            </motion.span>
-          </div>
-          <div className="ml-8">
-            <motion.span
-              variants={typingAnimation}
-              initial="hidden"
-              whileInView="visible"
-            >
-              {text1.split("").map((char, index) => (
-                <span className="text-4xl font-bold" key={index}>
-                  {char}
-                </span>
-              ))}
-            </motion.span>
-          </div>
-        </div>
-        <div>
-          <div className="mt-4">
-            <motion.span
-              variants={typingAnimation}
-              initial="hidden"
-              whileInView="visible"
-            >
-              {text2.split("").map((char, index) => (
-                <span className="text-2xl text-gray-600" key={index}>
-                  {char}
-                </span>
-              ))}
-            </motion.span>
-          </div>
-        </div>
-        <AnimationText />
-      </div> */}
       <div className="w-full mt-20 bg-gray-200 h-screen">
         <div className="flex justify-around pt-28">
           <div className="flex flex-col">
@@ -215,8 +169,8 @@ const CharacterAnimation = () => {
                 left: 0,
                 right: 0,
                 paddingTop: "200px",
-                paddingRight:'40px',
-                paddingLeft:'40px',
+                paddingRight: "40px",
+                paddingLeft: "40px",
                 fontWeight: "bold",
                 fontSize: "40px",
               }}
@@ -229,12 +183,21 @@ const CharacterAnimation = () => {
           )}
         </div>
         <div className="mx-8 flex justify-between">
-          <div className="flex gap-16 items-center ">
-            <div className="h-18 w-18 border p-2 ">
-              <img className="rounded-full" src="https://picsum.photos/50" alt="" />
-            </div>
-            <div className="text-center text-lg">Aman tiwari</div>
-          </div>
+          {componentRef.current && (
+            <motion.div initial={{ opacity: -8 }} whileInView={{ opacity: 1 }} transition={{duration:4}}>
+              <div className="flex gap-16 items-center ">
+                <div className="h-18 w-18 border p-2 " ref={componentRef}>
+                  <img
+                    className="rounded-full"
+                    src="https://picsum.photos/50"
+                    alt=""
+                  />
+                </div>
+                <div className="text-center text-lg">Aman tiwari</div>
+              </div>
+            </motion.div>
+          )}
+
           <div>
             <p className="flex items-center">Boot camps in progress</p>
           </div>
