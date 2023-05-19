@@ -5,6 +5,7 @@ import Card from "./components/pages/Card";
 import HeroSection from "./components/pages/HeroSection";
 import Scroll from "./components/pages/Scroll";
 import CharacterAnimation from "./components/pages/CharacterAnimation";
+import PhotoShop from "./components/pages/PhotoShop";
 
 interface ComponentData {
   id: number;
@@ -15,8 +16,9 @@ const App: React.FC = () => {
   const components: ComponentData[] = [
     { id: 1, component: Card },
     { id: 2, component: HeroSection },
-    { id: 3, component:  Scroll},
-    { id: 4, component:  CharacterAnimation},
+    { id: 3, component: Scroll },
+    { id: 4, component: CharacterAnimation },
+    { id: 5, component: PhotoShop },
     // Add more components as needed
   ];
 
